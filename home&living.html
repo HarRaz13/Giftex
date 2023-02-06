@@ -13,188 +13,368 @@
             margin: 0;
             padding: 0;
         }
-
-        ul li{
-            text-align: center;
-            justify-items: center;
-        }
-
         section{
             position: relative;
             width: 100%;
             height: 100vh;
-            background: #b5a99d;
             overflow: scroll;
-        }
-
-        section .wave{
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: url(wave.png);
-            background-size: 1000px 100px;
-            
-        }
-
-        section .wave.wave1{
-            animation: animate 30s linear infinite;
-            z-index: 1000;
-            opacity: 0.9;
-            animation-delay: 0s;
-            bottom: 0;
-        }
-        section .wave.wave2{
-            animation: animate2 15s linear infinite;
-            z-index: 999;
-            opacity: 0.4;
-            animation-delay: -5s;
-            bottom: 10px;
-        }
-        section .wave.wave3{
-            animation: animate 3s linear infinite;
-            z-index: 998;
-            opacity: 0.1;
-            animation-delay: -2s;
-            bottom: 15px;
-        }
-        section .wave.wave4{
-            animation: animate2 5s linear infinite;
-            z-index: 997;
-            opacity: 0.6;
-            animation-delay: -5s;
-            bottom: 20px;
-        }
-        @keyframes animate{
-            0%{
-                background-position-x: 0;
-            }
-            100%{
-                background-position-x: 1000px;
-            }
-        }
-        @keyframes animate2{
-            0%{
-                background-position-x: 0;
-            }
-            100%{
-                background-position-x: -1000px;
-            }
         }
         .carousel-inner .carousel-item img{
             width: auto;
             object-position: center;
             object-fit: cover;
         }
-        .card{
-            background-color: #d9b589;
-            /* background-image: linear-gradient(to right, #ccfbff, #ef96c5 ); */
+        .card-title{
+          text-decoration: none;
         }
+        .card:hover {
+            transform: scale(1.05);
+            z-index: 9;
+        }
+        .card{            
+            background-color: #ffc8dd;
+            color: black;
+            text-align: center;
+            box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+            border-radius: 0;
+            border: 0;
+            transition: transform 0.2s ease;
+          }
         .card img{
             border-radius: 15px;
         }
+        #american{
+        background-color: #ffc8dd;
+        color: black;
+        border-color:black;
+        }
+        #indian{
+          background-color: #ffc8dd;
+          color: black;
+          border-color:black;
+        }
+        #meesho{
+          background-color: #ffc8dd;
+          color: black;
+          border-color:black;
+        }
+        .container {
+          border: none;
+          border-radius: none
+        }
+
+        .abc {
+            padding-left: 40px
+        }
+
+        .pqr {
+            padding-right: 70px;
+            padding-top: 14px
+        }
+
+        .para {
+            float: right;
+            margin-right: 0;
+            padding-left: 80%;
+            top: 0
+        }
+
+        .fa-star {
+            color: yellow
+        }
+
+        li {
+            list-style: none;
+            line-height: 50px;
+            color: #000
+        }
+
+        .col-md-2 {
+            padding-bottom: 10px;
+            font-weight: bold
+        }
+
+        .col-md-2 button {
+            text-decoration: none;
+            color: #000
+        }
+
+        .col-md-2.mio {
+            font-size: 12px;
+            padding-top: 7px
+            
+        }
+
+        .modal{
+          z-index: 10000;
+        }
+
+        @media screen and (max-width: 620px) {
+            .container {
+                width: 98%;
+                display: flex;
+                flex-flow: column;
+                text-align: center
+            }
+
+            .pqr {
+                text-align: center;
+                margin: 0 30px
+            }
+
+            .para {
+                text-align: center;
+                padding-left: 90px;
+                padding-top: 10px
+            }
+
+            .klo {
+                display: flex;
+                text-align: center;
+                margin: 0 auto;
+                margin-right: 40px
+            }
+
+            .card .card-title{
+                font-size: 30px;
+            }
+                    
+            h1{
+              font-size: 40px;
+            }
+
+            .nav-link{
+              font-size: 30px;
+            }
+          } 
     </style>
 </head>
 <body>
-    <nav class="navbar sticky-sm-top" style="background-color: #b5a99d;">
+    <nav class="navbar sticky-sm-top" style="background-color: black;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Giftex</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <a class="navbar-brand" href="index.html" style="color: #ffc8dd;">Giftex</a>
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-2 text-center">
-                        <i class="fa-solid fa-house fa-2xl"></i>
-                        <a class="nav-link" style="font-family: 'Trirong';" href="home&living.html">Home and Living</a>
-                    </div>
-            
-                    <div class="col-md-2 text-center">
-                        <i class="fa-brands fa-docker fa-2xl"></i>
-                        <a class="nav-link" style="font-family: 'Trirong';" href="miniature.html">Miniature</a>                   
-                    </div>
-            
-                    <div class="col-md-2 text-center">
-                        <i class="fa-solid fa-child-reaching fa-2xl"></i>
-                        <a class="nav-link" style="font-family: 'Trirong';" href="kids.html">Kids</a>                  
-                    </div>
-            
-                    <div class="col-md-2 text-center">
-                        <i class="fa-solid fa-lightbulb fa-2xl"></i>
-                        <a class="nav-link" style="font-family: 'Trirong';" href="lamp.html">Lamp and Lighting</a>
-                    </div>
-                    
-                    <div class="col-md-2 text-center">
-                        <i class="fa-solid fa-seedling fa-2xl"></i>
-                        <a class="nav-link" style="font-family: 'Trirong';" href="flo.html">Floral</a>
-                    </div>
-
-                    <div class="col-md-2 text-center">
-                        <i class="fa-solid fa-gamepad fa-2xl"></i>
-                        <a class="nav-link" style="font-family: 'Trirong';" href="toys.html">Stuffed Toys</a>
-                    </div>
+              <div class="row mt-2" style="color: #ffc8dd;">
+                <div class="col-md-3 text-center">
+                  <i class="fa-solid fa-snowman fa-2xl"></i>
+                    <a class="nav-link" style="font-family: 'Trirong';" href="home&living.html">Decorative Showpiece</a>
                 </div>
+        
+                <div class="col-md-3 text-center">
+                    <i class="fa-brands fa-docker fa-2xl"></i>
+                    <a class="nav-link" style="font-family: 'Trirong';" href="miniature.html">Miniature</a>                   
+                </div>
+        
+                <!-- <div class="col-md-2 text-center">
+                    <i class="fa-solid fa-child-reaching fa-2xl"></i>
+                    <a class="nav-link" style="font-family: 'Trirong';" href="kids.html">Kids</a>                  
+                </div> -->
+        
+                <div class="col-md-3 text-center">
+                  <i class="fa-solid fa-beer-mug-empty fa-2xl"></i>
+                    <a class="nav-link" style="font-family: 'Trirong';" href="lamp.html">Mugs</a>
+                </div>
+                
+                <div class="col-md-3 text-center">
+                  <i class="fa-solid fa-heart fa-2xl"></i>
+                    <a class="nav-link" style="font-family: 'Trirong';" href="flo.html">Valentine</a>
+                </div>
+
+                <!-- <div class="col-md-2 text-center">
+                    <i class="fa-solid fa-gamepad fa-2xl"></i>
+                    <a class="nav-link" style="font-family: 'Trirong';" href="toys.html">Stuffed Toys</a>
+                </div> -->
+              </div>
             </div>
-          </div>
         </div>
       </nav>
       <section>
       
         <div class="text-center container py-5">
-          <h1 class="mt-4 mb-5" style="font-family: 'Sofia'; color: #4b473e;"><strong>Home and Living</strong></h1>
+          <h1 class="mt-4 mb-5" style="font-family: 'DM Serif Display'; color: black;"><strong>Decorative Showpiece</strong></h1>
       
           <div class="row">
-            <div class="col-lg-4 col-md-12 mb-4">
+            <div class="col-lg-3 col-md-6 mb-4">
               <div class="card rounded-4">
                 <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
                   data-mdb-ripple-color="light">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/belt.webp"
-                    class="w-100" />
-                  <a href="#!">
-                    <div class="hover-overlay">
-                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </div>
-                  </a>
+                  <img src="assets/BONSAI IN A BOX/IMG_3579.JPG"
+                    class="w-100" data-bs-toggle="modal" data-bs-target="#bonsai"/>
                 </div>
                 <div class="card-body">
-                  <a href="" class="text-reset">
-                    <h5 class="card-title mb-3">Product name</h5>
+                  <a>
+                    <h5 class="card-title fw-bold">Bonsai</h5>
                   </a>
-                  <a href="" class="text-reset">
-                    <p>Category</p>
-                  </a>
-                  <h6 class="mb-3">$61.99</h6>
-                </div>
               </div>
             </div>
+            <div class="modal fade" id="bonsai"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl modal-dialog-centered ">
+                <div class="modal-content">
+                  <!-- <div class="modal-header">
+                    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div> -->
+                  <div class="modal-body ">
+                      <div class="container py-4 my-1 mx-auto d-flex flex-column">
+                          <div class="header">
+                              <div class="row r1">
+                                  <div class="col-md-11 abc">
+                                      <h1 style="text-align: left;">Bonsai in a Box</h1>
+                                  </div>
+                                  <div class="col-md-1"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                  
+                              </div>
+                          </div>
+                          <div class="container-body mt-4">
+                              <div class="row r3">
+                                  <div class="col-lg-5 p-0 klo">
+                                      <ul class="fs-4" style="font-family: EB Garamond;">
+                                          <li>100% Quality</li>
+                                          <li>Free Shipping</li>
+                                          <li>Easy Returns</li>
+                                          <li>12 Months Warranty</li>
+                                          <li>EMI Starting from (On Credit Cards)</li>
+                                          <li>Normal Delivery : 4-5 Days</li>
+                                          <li>Express Delivery : 2-3 Days</li>
+                                          <li>COD Available (All Over India)</li>
+                                      </ul>
+                                  </div>
+                                  <div class="col-lg-7"> <div id="productbon" class="carousel slide" data-bs-ride="carousel">
+                                      <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#productbon" data-bs-slide-to="0" class="active"></button>
+                                        <button type="button" data-bs-target="#productbon" data-bs-slide-to="1"></button>
+                                        <button type="button" data-bs-target="#productbon" data-bs-slide-to="2"></button>
+                                        <button type="button" data-bs-target="#productbon" data-bs-slide-to="3"></button>
+                                      </div> 
+
+                                      <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                          <img src="assets/BONSAI IN A BOX/IMG_3579.JPG" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <img src="assets/BONSAI IN A BOX/IMG_3581.JPG" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                          <img src="assets/BONSAI IN A BOX/IMG_3579.JPG" class="d-block w-100" alt="...">
+                                        </div>
+                                      </div>
+                                      <button class="carousel-control-prev" type="button" data-bs-target="#productbon" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                      </button>
+                                      <button class="carousel-control-next" type="button" data-bs-target="#productbon" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                      </button>
+                                    </div></div>
+                              </div>
+                          </div>
+                          <div class="footer d-flex justify-content-around mt-5">
+                              <div class="row">
+                                  <div><p class="col-12 fs-3" style="font-family: 'Times New Roman', Times, serif;">Buy From</p></div>
+                                  <!-- <div class="col-4  "><button type="button" class="btn" id="american">Amazon USA</button></div>
+                                  <div class="col-4  "><button type="button" class="btn" id="indian">Amazon India</button></div> -->
+                                  <div class="col-12 "><a href="https://www.meesho.com/amazing-artificial-plant-flower-and-shrubs/p/3uv682?_ms=2&source=Meri+Shop"><button type="button" class="btn" id="meesho">Meesho</button></div></a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+            </div>
       
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-3 col-md-6 mb-4">
               <div class="card rounded-4">
                 <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
                   data-mdb-ripple-color="light">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp"
-                    class="w-100" />
-                  <a href="#!">
-                    <div class="hover-overlay">
-                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                    </div>
-                  </a>
+                  <img src="assets/DECORATIVE SHOWPIECE/meesho 799  -  giftex 699.JPG"
+                    class="w-100" data-bs-toggle="modal" data-bs-target="#diamond"/>
                 </div>
                 <div class="card-body">
-                  <a href="" class="text-reset">
-                    <h5 class="card-title mb-3">Product name</h5>
+                  <a>
+                    <h5 class="card-title fw-bold">Flying Diamond</h5>
                   </a>
-                  <a href="" class="text-reset">
-                    <p>Category</p>
-                  </a>
-                  <h6 class="mb-3">$61.99</h6>
                 </div>
               </div>
+              <div class="modal fade" id="diamond"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered ">
+                  <div class="modal-content">
+                    <!-- <div class="modal-header">
+                      
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div> -->
+                    <div class="modal-body ">
+                        <div class="container py-4 my-1 mx-auto d-flex flex-column">
+                            <div class="header">
+                                <div class="row r1">
+                                    <div class="col-md-11 abc">
+                                        <h1 style="text-align: left;">Flying Diamond</h1>
+                                    </div>
+                                    <div class="col-md-1"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                                    
+                                </div>
+                            </div>
+                            <div class="container-body mt-4">
+                                <div class="row r3">
+                                    <div class="col-lg-5 p-0 klo">
+                                        <ul class="fs-4">
+                                            <li>100% Quality</li>
+                                            <li>Free Shipping</li>
+                                            <li>Easy Returns</li>
+                                            <li>12 Months Warranty</li>
+                                            <li>EMI Starting from (On Credit Cards)</li>
+                                            <li>Normal Delivery : 4-5 Days</li>
+                                            <li>Express Delivery : 2-3 Days</li>
+                                            <li>COD Available (All Over India)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-7"> <div id="productdia" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                          <button type="button" data-bs-target="#productdia" data-bs-slide-to="0" class="active"></button>
+                                          <button type="button" data-bs-target="#productdia" data-bs-slide-to="1"></button>
+                                          <button type="button" data-bs-target="#productdia" data-bs-slide-to="2"></button>
+                                          <button type="button" data-bs-target="#productdia" data-bs-slide-to="3"></button>
+                                        </div> 
+  
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <img src="assets/DECORATIVE SHOWPIECE/IMG_3600.JPG" class="d-block w-100" alt="...">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/DECORATIVE SHOWPIECE/meesho 799  -  giftex 699.JPG" class="d-block w-100" alt="...">
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="assets/DECORATIVE SHOWPIECE/IMG_3600.JPG" class="d-block w-100" alt="...">
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#productdia" data-bs-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#productdia" data-bs-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div></div>
+                                </div>
+                            </div>
+                            <div class="footer d-flex justify-content-around mt-5">
+                                <div class="row">
+                                    <div><p class="col-11 fs-3" style="text-align: center; font-family: 'Times New Roman', Times, serif;">Buy From</p></div>
+                                    <div class="col-4  "><button type="button" class="btn" id="american">Amazon USA</button></div>
+                                    <div class="col-4  "><button type="button" class="btn" id="indian">Amazon India</button></div>
+                                    <div class="col-4  "><button type="button" class="btn" id="meesho">Meesho</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
             </div>
       
-            <div class="col-lg-4 col-md-6 mb-4">
+            <!-- <div class="col-lg-4 col-md-6 mb-4">
               <div class="card rounded-4">
                 <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
                   <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/shoes%20(3).webp"
@@ -206,21 +386,15 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <a href="" class="text-reset">
-                    <h5 class="card-title mb-3">Product name</h5>
+                  <a>
+                    <h5 class="card-title fw-bold">Product name</h5>
                   </a>
-                  <a href="" class="text-reset">
-                    <p>Category</p>
-                  </a>
-                  <h6 class="mb-3">
-                    <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
-                  </h6>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
       
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-lg-4 col-md-12 mb-4">
               <div class="card rounded-4">
                 <div class="bg-image hover-zoom ripple" data-mdb-ripple-color="light">
@@ -233,15 +407,9 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <a href="" class="text-reset">
-                    <h5 class="card-title mb-3">Product name</h5>
+                  <a>
+                    <h5 class="card-title fw-bold">Product name</h5>
                   </a>
-                  <a href="" class="text-reset">
-                    <p>Category</p>
-                  </a>
-                  <h6 class="mb-3">
-                    <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
-                  </h6>
                 </div>
               </div>
             </div>
@@ -259,13 +427,9 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <a href="" class="text-reset">
-                    <h5 class="card-title mb-3">Product name</h5>
+                  <a>
+                    <h5 class="card-title fw-bold">Product name</h5>
                   </a>
-                  <a href="" class="text-reset">
-                    <p>Category</p>
-                  </a>
-                  <h6 class="mb-3">$61.99</h6>
                 </div>
               </div>
             </div>
@@ -283,26 +447,26 @@
                   </a>
                 </div>
                 <div class="card-body">
-                  <a href="" class="text-reset">
-                    <h5 class="card-title mb-3">Product name</h5>
+                  <a>
+                    <h5 class="card-title fw-bold">Product name</h5>
                   </a>
-                  <a href="" class="text-reset">
-                    <p>Category</p>
-                  </a>
-                  <h6 class="mb-3">
-                    <s>$61.99</s><strong class="ms-2 text-danger">$50.99</strong>
-                  </h6>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
+        </div>
+
+        <div class="text-center container py-5">
+          <h1 class="mt-4 mb-5" style="font-family: 'Sofia'; color: #fb6f92;"><strong>More Coming Soon...</strong></h1>
         </div>
       
       
-        <div class="wave wave1"></div>
-        <div class="wave wave2"></div>
-        <div class="wave wave3"></div>
-        <div class="wave wave4"></div>
+        <footer class="text-center text-lg-start text-white" style="background-color: #929fba"> 
+          <div class="text-center p-3 sticky-lg-bottom" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2023 Copyright:
+            <a class="text-white" href="#">Giftex</a>
+          </div>
+        </footer>
       </section>
 </body>
 </html>
